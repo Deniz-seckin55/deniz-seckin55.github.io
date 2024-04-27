@@ -2,10 +2,13 @@ Hello! After this URL use /<i>file_name</i> to access files!
 <script>
   const files = ["npback.png","npfront.png"];
   files.forEach((item, index)=>{
-	  var tag = document.createElement("a"); // <p></p>
-    var text = document.createTextNode(item); 
-    tag.appendChild(text); // <p>TEST TEXT</p>
-    var element = document.getElementsByTagName("body")[0];
-    element.appendChild(tag); // <body> <p>TEST TEXT</p> </body>
+	var tag = document.createElement("a"); // <p></p>
+    	var text = document.createTextNode(item); 
+    	tag.appendChild(text); // <p>TEST TEXT</p>
+	tag.href = "https://deniz-seckin55.github.io/"+item;
+   	var element = document.getElementsByTagName("body")[0];
+	var tag2 = document.createElement("br");
+	element.appendChild(tag2); 
+    	element.appendChild(tag); // <body> <p>TEST TEXT</p> </body>
   });
 </script>
