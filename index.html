@@ -1,13 +1,11 @@
 Hello! After this URL use /<i>file_name</i> to access files!
 <script>
-  var fs = require('fs');
-  var files = fs.readdirSync('/downloads');
+  const files = ["npback.png","npfront.png"];
   files.forEach((item, index)=>{
-     var tag = document.createElement("a"); // <p></p>
+	  var tag = document.createElement("a"); // <p></p>
     var text = document.createTextNode(item); 
     tag.appendChild(text); // <p>TEST TEXT</p>
-    tag.href = item;
     var element = document.getElementsByTagName("body")[0];
     element.appendChild(tag); // <body> <p>TEST TEXT</p> </body>
-  })
+  });
 </script>
